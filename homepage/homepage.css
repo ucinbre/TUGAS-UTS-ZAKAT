@@ -7,7 +7,7 @@
 
 :root{
      --test-color: rgba(0,0,0,0.3);
-     --button-color: rgb(255, 154, 66);
+     --button-color: #03a9f4;
 }
 
 html {
@@ -197,13 +197,11 @@ html {
     right: -5px;
     bottom: -5px;
     z-index: -1;
-    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
     background-size: 200%;
     border-radius: 8px;
     opacity: 1;
     transition: 0.5s;
-    animation: rainbow 4s linear infinite;
-    filter: blur(15px);
+        filter: blur(15px);
 }
 
 .form-box .form-login span {

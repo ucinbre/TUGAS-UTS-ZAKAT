@@ -111,39 +111,38 @@ aside .nav {
 }
 
 aside button {
-    margin: 0 auto;
+    margin: 20px auto 0;
     width: 60%;
-    padding: 7px 0;
+    background-color: #fff;
+    border: none;
+    color: black;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
     border-radius: 5px;
     position: relative;
-    bottom: -35%;
-    font-size: 20px;
-    font-weight: bold;
-    z-index: 5;
-    border: none;
-    background-color: rgb(255, 255, 255);
-    transition: .2s;
+    padding: 10px 30px;
+    transition: .5s;
+    background-size: 400%;
     cursor: pointer;
-    color: var(--primary);
 }
 
 
 aside button:before {
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
-    mix-blend-mode: screen;
-    background-size: 200%;
-    border-radius: 50px;
-    opacity: .5;
-    transition: 0.5s;
-    animation: rainbow1 4s linear infinite;
-    z-index: -1;
-    filter: blur(10px);
+    margin: 20px auto 0;
+    width: 60%;
+    background-color: #fff;
+    border: none;
+    color: black;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    position: relative;
+    padding: 10px 30px;
+    transition: .5s;
+    background-size: 400%;
+    cursor: pointer;
 }
 
 aside button:hover::before {
@@ -179,7 +178,7 @@ main {
 .wrapperEdit {
     height: 101vh;
     width: 83.5%;
-    background-color: white;
+    background-image: linear-gradient( #03a9f4, #161651);
     position: fixed;
 
     /* ANIMATED PROPERTIES */
@@ -213,32 +212,6 @@ a.closeBtn:hover {
     background-color: var(--secondary);
     color: white;
     transition: 0.2s;
-}
-
-.wrapperEdit .shape1 {
-    width: 500px;
-    height: 500px;
-    display: block;
-    background-image: linear-gradient(to right, rgb(255, 111, 0), rgb(255, 255, 0));
-    transform: rotate(45deg);
-    border-radius: 50%;
-    position: absolute;
-    bottom: -40%;
-    left: -20%;
-    z-index: -1;
-}
-
-.wrapperEdit .shape2 {
-    width: 400px;
-    height: 400px;
-    display: block;
-    background-image: linear-gradient(to right, rgb(126, 71, 28), rgb(255, 180, 49));
-    transform: rotate(45deg);
-    border-radius: 50%;
-    position: absolute;
-    top: -30%;
-    right: -18%;
-    z-index: -1;
 }
 
 .wrapperEdit::-webkit-scrollbar {
@@ -290,7 +263,6 @@ a.closeBtn:hover {
     padding: 10px 30px;
     transition: .5s;
     background-size: 400%;
-    animation: rainbow 8s linear infinite;
     cursor: pointer;
 }
 
@@ -302,12 +274,10 @@ a.closeBtn:hover {
     right: -5px;
     bottom: -5px;
     z-index: -1;
-    background: linear-gradient(90deg, rgba(0, 0, 255, 0.5), rgba(255, 0, 0, 0.8), rgba(255, 255, 0, 0.8), rgba(0, 0, 255, 0.8));
     background-size: 200%;
     border-radius: 8px;
     opacity: 1;
     transition: 0.5s;
-    animation: rainbow 4s linear infinite;
     filter: blur(15px);
 }
 

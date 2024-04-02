@@ -111,6 +111,7 @@
             <div class="header">
                 <h1>Pembayaran Zakat</h1>
                 <button class="btnTambah">Buat Baru</button>
+                <button class="btnDownload">Download</button>
             </div>
 
             <div class="table-container">
@@ -259,6 +260,34 @@
         });
     });
     </script>
+
+<script>
+    $(document).ready(function() {
+        // Event listener untuk tombol "Download"
+        $(".btnDownload").on("click", function() {
+            // Lakukan permintaan AJAX untuk mengambil data dari file PHP yang akan menghasilkan file database
+            $.ajax({
+                url: 'export.php', // Ganti 'export.php' dengan file PHP yang akan menghasilkan file database
+                method: 'POST',
+                success: function(response) {
+                    // Buat link untuk men-download file database
+                    var downloadLink = document.createElement('a');
+                    downloadLink.href = response.fileUrl;
+                    downloadLink.download = response.fileName;
+                    document.body.appendChild(downloadLink);
+                    downloadLink.click();
+                    document.body.removeChild(downloadLink);
+                },
+                error: function(xhr, status, error) {
+                    // Tampilkan pesan kesalahan jika terjadi masalah saat mengambil data dari server
+                    console.error(xhr.responseText);
+                    alert('Terjadi kesalahan saat mengambil data. Silakan coba lagi.');
+                }
+            });
+        });
+    });
+</script>
+
 
     <script src="dashboard.js"></script>
 </body>
